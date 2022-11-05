@@ -1,6 +1,4 @@
 from flask import Flask, request, render_template
-from random import randint,choice, sample
-from tkinter import *
 from flask_debugtoolbar import DebugToolbarExtension
 from stories import Story
 
