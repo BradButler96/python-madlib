@@ -1,0 +1,31 @@
+{% extends 'base.html'  %}
+{% block title %}Create a Mad Lib{% endblock %}
+
+
+{% block content %}
+    <h1>Madlibs</h1>
+
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Choose a story!
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <li>
+            <form action="/story-1">
+                <button class="dropdown-item" type="submit" id="story-1-btn" name="story-1-btn">Story 1</button>
+            </form>
+        </li>
+        <li>
+            <form action="/story-2">
+                <button class="dropdown-item" type="submit" id="story-2-btn" name="story-2-btn">Story 2</button>
+            </form>
+        </li>
+        <li>
+            <form action="/story-3">
+                <button class="dropdown-item" type="submit" id="story-3-btn" name="story-3-btn">Story 3</button>
+            </form>
+        </li>
+      </ul>
+    </div>
+{% endblock %}
+
