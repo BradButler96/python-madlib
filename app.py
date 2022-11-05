@@ -6,22 +6,6 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = "oh-so-secret"
 debug = DebugToolbarExtension(app)
 
-
-
-words1 = ["place", "noun", "verb", "adjective", "plural_noun"]
-phrase1 = """Once upon a time in a long-ago {place}, there lived a
-       large {adjective} {noun}. It loved to {verb} {plural_noun}."""
-
-
-words2 = ["adjective_1", "noun_1", "verb", "adverb", "adjective_2", "noun_2"]
-phrase2 = """Today I went to the zoo. I saw a(n) {adjective_1} {noun_1} jumping up and down in its tree.
-        He {verb} {adverb} through the large tunnel that led to its {adjective_2}
-        {noun_2}."""
-
-words3 = ["name", "verb", "number", "animal", "adjective", "emotion"]
-phrase3 = """This morning I saw {name} {verb} {number} {animal}. 
-         It was very {adjective}, I love {animal} so it made me {emotion}."""
-
 @app.route('/')
 def create_story():
     return render_template('index.html')
